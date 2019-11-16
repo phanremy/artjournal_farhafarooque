@@ -11,10 +11,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-nav-bar sticky-top">
+      <ul class="list-inline text-center p-3 m-0 ">
+        <li class="list-inline-item"><%= link_to "Home", root_path, class: "d-block btn" %></li>
+        <li class="list-inline-item"><%= link_to "About me", pages_about_path, class: "d-block btn" %></li>
+        <li class="list-inline-item"><%= link_to "Portfolio", pages_portfolio_path, class: "d-block btn" %></li>
+        <li class="list-inline-item"><%= link_to "Shop", pages_shop_path, class: "d-block btn" %></li>
+      </ul>
+    </div>
+    <div class="container border-top pt-3">
+      <%= yield %>
+    </div>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
 </html>
