@@ -4,3 +4,14 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
+
+document.addEventListener('scroll', (event) => {
+  let scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
+  let scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight;
+  let scrollPercent = scrollTop / scrollBottom * 100 + "%";
+  document
+    .querySelector('#progress-bar')
+    .style.width = scrollPercent;
+  },
+  { passive: true }
+);
