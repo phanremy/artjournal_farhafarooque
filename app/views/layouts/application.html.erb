@@ -11,14 +11,30 @@
   </head>
 
   <body>
-    <div class="main-nav-bar sticky-top">
-      <ul class="list-inline text-center p-3 m-0 ">
-        <li class="list-inline-item"><%= link_to "Home", root_path, class: "d-block btn" %></li>
-        <li class="list-inline-item"><%= link_to "About me", pages_about_path, class: "d-block btn" %></li>
-        <li class="list-inline-item"><%= link_to "Portfolio", pages_portfolio_path, class: "d-block btn" %></li>
-        <li class="list-inline-item"><%= link_to "Shop", pages_shop_path, class: "d-block btn" %></li>
-      </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <%= link_to "Home", root_path, class: "navbar-brand"%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Portfolio", portfolio_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Shop", shop_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About me", about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Travelogues", travelogues_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container border-top pt-3">
       <%= yield %>
     </div>

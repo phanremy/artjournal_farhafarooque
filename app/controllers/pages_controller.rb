@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def portfolio
   end
 
-  def contact
+  def travelogues
   end
 
   def shop
