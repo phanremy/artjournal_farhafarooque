@@ -11,12 +11,17 @@
   </head>
 
   <body>
-    <div class="progress-container">
-      <div class="progress-bar" id="progress-bar">
+    <% unless params[:name].nil? %>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">
+        </div>
       </div>
-    </div>
+    <% end %>
+
     <nav class="navbar sticky navbar-expand-lg navbar-light bg-transparent">
-      <%= link_to "Home", root_path, class: "navbar-brand"%>
+      <%= link_to root_path, class: "navbar-brand" do%>
+        <%= image_tag("https://res.cloudinary.com/phanremy/image/upload/v1576622107/artjournal_farhafarooque/logo_ficmuo.png", width: 50, height: 50, crop: :fill) %>
+      <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

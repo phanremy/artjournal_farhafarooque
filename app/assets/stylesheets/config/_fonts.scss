@@ -17,3 +17,23 @@ $headers-font: "Baskervville", "serif", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+//Imported Fonts
+// @font-face {
+//   font-family:"personalized";
+//   src: url(/assets/fonts/aracne.otf) format("truetype");
+// }
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "aracne";
+//   src: font-url('aracne.otf');
+//   src: font-url('aracne.otf?#iefix') format('embedded-opentype'),
+//        font-url('aracne.otf') format('woff'),
+//        font-url('aracne.otf') format('truetype')
+// }
+// $my-font: "aracne";
+
+// Define fonts for body and headers
+// $body-font: "aracne", "Raleway", "Helvetica", "sans-serif";
+// $headers-font: "Baskervville", "serif", "sans-serif";
