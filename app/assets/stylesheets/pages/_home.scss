@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+
+.carousel .item {
+  max-height: 690px;
+  max-width: 690px;
+}
+
+.carousel-item{
+  max-height: 690px;
+  max-width: 690px;
+}
+
+.carousel-item img{
+  max-height: 690px;
+  max-width: 690px;
+}
+
+.carousel {
+  max-height: 690px;
+  max-width: 690px;
+}
+
+.presentation-card {
+  border: 12px solid #1C6EA4;
+  height: 100%;
+  top:10px;
+}
+
+.post-card {
+  width: 100%;
+}

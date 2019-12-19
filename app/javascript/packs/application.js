@@ -2,16 +2,15 @@ import 'bootstrap';
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { initProgressbar } from '../plugins/init_progressbar';
 
-initMapbox();
 
-document.addEventListener('scroll', (event) => {
-  let scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
-  let scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight;
-  let scrollPercent = scrollTop / scrollBottom * 100 + "%";
-  document
-    .querySelector('#progress-bar')
-    .style.width = scrollPercent;
-  },
-  { passive: true }
-);
+if (document.getElementById('map')) {
+  initMapbox();
+}
+
+if (document.getElementById('progress-bar')) {
+  initProgressbar();
+}
+
+
