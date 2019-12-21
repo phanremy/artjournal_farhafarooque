@@ -21,11 +21,19 @@
 }
 
 .presentation-card {
-  border: 12px solid #1C6EA4;
+  border: 12px solid grey;
+  // position: sticky
+  text-align: center;
   height: 100%;
   top:10px;
 }
 
 .post-card {
   width: 100%;
+}
+
+.footer-card {
+  // border-top: 1px grey solid;
+  color:grey;
+  font-size: 14px;
 }

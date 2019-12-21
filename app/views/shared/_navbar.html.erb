@@ -1,10 +1,5 @@
-<nav class="navbar sticky navbar-expand-lg navbar-light bg-transparent">
-  <%= link_to root_path, class: "navbar-brand" do%>
-    <%= link_to "The Traveling Illustrator", root_path, class: "navbar-brand"%>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar sticky navbar-expand-lg navbar-light bg-transparent justify-content-center">
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -14,6 +9,20 @@
       <li class="nav-item">
         <%= link_to "🛍 Shop", shop_path, class: "nav-link" %>
       </li>
+    </ul>
+  </div>
+
+
+  <%= link_to root_path, class: "navbar-brand" do%>
+    <%= link_to "The Traveling Illustrator", root_path, class: "navbar-brand"%>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <%= link_to "🧚‍♂️ About me", about_path, class: "nav-link" %>
       </li>
