@@ -1,34 +1,54 @@
 <!-- <div class="container border-bottom sticky"> -->
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-center container border-bottom">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="order-1 order-lg-1 order-xl-1 collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        <% if current_page?(portfolio_path) %>
+          <li class="nav-item active">
+        <% else %>
+          <li class="nav-item">
+        <% end %>
           <%= link_to "🖌 Portfolio", portfolio_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <% if current_page?(shop_path) %>
+          <li class="nav-item active">
+        <% else %>
+          <li class="nav-item">
+        <% end %>
           <%= link_to "🛍 Shop", shop_path, class: "nav-link" %>
         </li>
       </ul>
     </div>
 
-
-    <%= link_to root_path, class: "navbar-brand" do%>
-      <%= image_tag("components/logo.png", width: 100, height: 100, crop: :fill) %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="order-2 order-lg-3 order-xl-3 collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        <% if current_page?(about_path) %>
+          <li class="nav-item active">
+        <% else %>
+          <li class="nav-item">
+        <% end %>
           <%= link_to "🧚‍♂️ About me", about_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <% if current_page?(travelogues_path) %>
+          <li class="nav-item active">
+        <% else %>
+          <li class="nav-item">
+        <% end %>
           <%= link_to "✈️ Travelogues", travelogues_path, class: "nav-link" %>
         </li>
       </ul>
     </div>
+
+    <div class="order-3 order-lg-2 order-xl-2 d-flex flex-column">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <%= link_to root_path, class: "bootnavbar-brand" do%>
+        <%= image_tag("components/logo.png", width: 100, height: 100, crop: :fill) %>
+      <% end %>
+
+    </div>
+
   </nav>
 <!-- </div> -->
