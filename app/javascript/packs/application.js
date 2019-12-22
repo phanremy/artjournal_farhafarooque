@@ -13,4 +13,19 @@ if (document.getElementById('progress-bar')) {
   initProgressbar();
 }
 
+const initUpdateNavbarOnScroll = () => {
+  if (document.querySelector('.navbar')) {
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= (window.innerHeight / 2)) {
+        navbar.classList.add('bg-light');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-light');
+      }
+    });
+  }
+}
 
+initUpdateNavbarOnScroll();

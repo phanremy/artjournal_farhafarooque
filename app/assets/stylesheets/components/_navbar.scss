@@ -16,6 +16,7 @@
   position: sticky;
   top:0;
   z-index: 99;
+  transition: background 0.4s ease
 }
 
 .navbar-collapse {
@@ -24,4 +25,8 @@
 
 .navbar a:hover{
   cursor: pointer !important;
+}
+
+.navbar-brand {
+  margin-left: 16px;
 }

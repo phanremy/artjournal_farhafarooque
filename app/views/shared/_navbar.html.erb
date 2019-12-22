@@ -1,34 +1,34 @@
-<nav class="navbar sticky navbar-expand-lg navbar-light bg-transparent justify-content-center">
+<!-- <div class="container border-bottom sticky"> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-center container border-bottom">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "🖌 Portfolio", portfolio_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "🛍 Shop", shop_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "🖌 Portfolio", portfolio_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "🛍 Shop", shop_path, class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
+    <%= link_to root_path, class: "navbar-brand" do%>
+      <%= image_tag("components/logo.png", width: 100, height: 100, crop: :fill) %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-  <%= link_to root_path, class: "navbar-brand" do%>
-    <%= link_to "The Traveling Illustrator", root_path, class: "navbar-brand"%>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "🧚‍♂️ About me", about_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "✈️ Travelogues", travelogues_path, class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "🧚‍♂️ About me", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "✈️ Travelogues", travelogues_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- </div> -->
