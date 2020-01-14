@@ -1,4 +1,12 @@
-<h1> <%= @city.name.capitalize %> is cool! </h1>
+<h1> <%= @city.name.capitalize %></h1>
+
+<% if @city.photos.attached? %>
+  <% @city.photos.each do |photo| %>
+    <div class="py-2">
+      <%= cl_image_tag photo.key, height: 300, width: 500, crop: :fill %>
+    </div>
+  <% end %>
+<% end %>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam accusamus facilis reprehenderit non modi, magnam illum esse consequatur obcaecati nostrum magni perferendis? Delectus qui cum et. Accusamus ipsum, excepturi labore?</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam accusamus facilis reprehenderit non modi, magnam illum esse consequatur obcaecati nostrum magni perferendis? Delectus qui cum et. Accusamus ipsum, excepturi labore?</p>
